@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao HTML</title>
+</head>
+
+<body>
+
+    <h1>Introdução ao HTML</h1>
+
+    <hr>
+
+    <blocquote>
+        <p>"HTML é a espinha dorsal da web, a estrutura que dá vida ao conteúdo digital". — Tim Berners-Lee, inventor da
+            World Wide Web.</p>
+    </blocquote>
+
+    <strong id="indice">Índice</strong>
+
+    <ul>
+        <li><a href="#ferramentas">Ferramentas utilizadas</a></li>
+        <li><a href="#inspetor">Inspetor de Elementos</a></li>
+        <li><a href="#estruturaHTML">Estrutura Básica do HTML</a></li>
+        <li><a href="#sobre-tags">Falando sobre Tags</a></li>
+        <li><a href="#atributos-tags">Atributos das Tags</a></li>
+        <li><a href="#textos">Textos</a></li>
+        <li><a href="#listas">Listas Ordenadas e Não Ordenadas</a></li>
+        <li><a href="#links">Links</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="ferramentas"><mark>Ferramentas utilizadas</mark></h2>
+
+    <p>A <abbr title="Integrated Development Environment">IDE</abbr> Visual Studio Code é uma ferramenta open source e
+        gratuita, disponível para Windows, Linux e
+        Mac, também utilizada no para desenvolver páginas web. Embora também seja possível usar outros editores de texto
+        simples, como Bloco de Notas, <i>Sublime</i> ou <i>Notepad++</i>.</p>
+
+    <h3>
+        <font face="Arial" color="red">Instalação</font>
+    </h3>
+
+    <p>Para instalar o <i><abbr title="Visual Studio Code">VSC</abbr></i>, o processo é simples: <del>Acesse o
+            site</del> Baixe o programa em <a href="https://code.visualstudio.com/download"
+            target="_blank">visualstudio.com/download</a>. Escolha a
+        <u>versão compatível com seu sistema operacional</u> e clique em "Download". Após o download, abra o arquivo,
+        aceite os
+        termos de licença, defina a pasta de instalação e siga os passos até concluir.
+    </p>
+
+    <p>No Windows, ao executar o programa pela primeira vez, uma mensagem de alerta pode aparecer devido ao uso de
+        interfaces web pelo aplicativo. Basta clicar em "Permitir acesso" para prosseguir.</p>
+
+    <h3>
+        <font face="Arial" color="red">Interface</font>
+    </h3>
+
+    <p>A tela inicial do <abbr title="Visual Studio Code">VSC</abbr> exibe uma mensagem de boas-vindas. A interface é
+        composta por:</p>
+
+    <ul>
+        <li>Explorador: Uma estrutura de pastas e arquivos no lado esquerdo.</li>
+        <li>Área de edição: O espaço central onde o código é escrito e editado.</li>
+    </ul>
+
+    <h3>
+        <font face="Arial" color="red">Extensões</font>
+    </h3>
+
+    <p>A extensão recomendada para instalar é o Live Server, que vai vai ajudar bastante no desenvolvimento. É uma
+        extensão que atualiza automaticamente a página no navegador durante o desenvolvimento, facilitando os ajustes em
+        tempo real. Outro plugin, que já vem pré-instalado dentro do <abbr title="Visual Studio Code">VSC</abbr>, é o
+        Emmet, que já vem embutido
+        dentro do <abbr title="Visual Studio Code">VSC</abbr>. O Emmet é um plugin que aumenta a produtividade ao
+        permitir a criação rápida de
+        código HTML e CSS com abreviações. Também é possível instalar no o Sublime ou outro programa que aceite plugins.
+        O Emmet vai te ajudar na produtividade.</p>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="inspetor"><mark>Inspetor de elementos</mark></h2>
+
+    <p>O inspetor de elementos é um recurso <u>essencial para o desenvolvimento web</u> disponível nos navegadores, como
+        o
+        Chrome. Abaixo estão os conceitos fundamentais:</p>
+
+    <ol>
+        <li>É uma ferramenta do desenvolvedor integrada aos navegadores (<i>Chrome</i>, <i>Firefox</i>, <i>Safari</i>,
+            <i>Edge</i>, etc.) que
+            permite inspecionar e modificar o HTML e o CSS de uma página web diretamente no navegador.
+        </li>
+        <li>Pode ser aberto pressionando a tecla F12 ou navegando pelo menu do Chrome (três pontinhos > Mais ferramentas
+            > Ferramentas do desenvolvedor). Isso exibe um console com várias funcionalidades.</li>
+        <li>Permite selecionar elementos na página (usando o ícone de seleção) para visualizar seu código HTML e os
+            estilos CSS aplicados. Quando o mouse passa sobre um elemento, ele é destacado na página e seu código é
+            exibido no painel.</li>
+        <li>É possível alterar o HTML (como texto) e o CSS (como cores, tamanhos de fonte, etc.) em tempo real, mas
+            essas mudanças são temporárias e revertidas ao atualizar a página. Isso é útil para estudo e experimentação.
+        </li>
+        <li>A ferramenta é recomendada para aprender HTML (estrutura da página) e CSS (formatação e estilo), ajudando a
+            entender como os elementos são criados e estilizados.</li>
+    </ol>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="estruturaHTML"><mark>Estrutura Básica do HTML</mark></h2>
+
+    <p>Um arquivo <abbr title="HyperText Markup Language">HTML</abbr> é composto por três elementos principais:</p>
+
+    <ol>
+        <li>&lt;html&gt; Define o início e o fim do documento <abbr title="HyperText Markup Language">HTML</abbr>.</li>
+        <li>&lt;head&gt; Contém informações carregadas antes da exibição, como o &lt;title&gt;, que define o título
+            exibido na aba do navegador.</li>
+        <li>&lt;body&gt; Contém o conteúdo visível ao usuário, como textos e imagens.</li>
+    </ol>
+
+    <p>Tags <abbr title="HyperText Markup Language">HTML</abbr> são marcadas por &lt; e &gt;, e a maioria precisa de uma
+        tag de fechamento com /.</p>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="sobre-tags"><mark>Falando sobre Tags</mark></h2>
+
+    <h3>
+        <font face="Arial" color="red">O que são Tags <abbr title="HyperText Markup Language">HTML</abbr></font>
+    </h3>
+
+    <p>Tags são elementos que <u>definem a estrutura e o comportamento</u> do conteúdo em uma página <abbr
+            title="HyperText Markup Language">HTML</abbr>.</p>
+
+    <p>Elas são delimitadas por &lt; e &gt;, e a maioria precisa de uma tag de fechamento (</tag>) para indicar onde o
+        efeito da tag termina.</p>
+
+    <strong>Exemplo:</strong>
+
+    <p>&lt;i&gt; para itálico e &lt;strong&gt; para negrito.</p>
+
+    <h4>Tags com e sem Fechamento</h4>
+
+    <h5>Tags com fechamento:</h5>
+
+    <p>São usadas para envolver conteúdo, como texto. Exemplo: &lt;i&gt;texto&lt/i&gt;.</p>
+
+    <h6>Este texto, por exemplo está dentro de uma tag &lt;h6&gt;H6&lt/h6&gt;</h6>
+
+    <h5>Tags sem fechamento:</h5>
+
+    <p>Também chamadas de tags auto-fechadas, não envolvem conteúdo e são usadas para inserir elementos únicos, como
+        campos de entrada (&lt;input&gt;) ou imagens (&lt;img&gt;). Essas tags podem incluir uma barra / no final para
+        indicar que são auto-fechadas.</p>
+
+    <h4>Combinação de Tags:</h4>
+
+    <p>Tags podem ser aninhadas para aplicar múltiplos efeitos. Por exemplo, usar &lt;strong&gt; e &lt;i&gt; juntos para
+        criar texto em negrito e itálico.</p>
+
+    <p>A ordem de abertura e fechamento deve ser respeitada: a tag aberta por último deve ser fechada primeiro.</p>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="atributos-tags"><mark>Atributos das Tags</mark></h2>
+
+    <p>Os atributos das tags são utilizados para <u>modificar o comportamento e a aparência</u> dos elementos em uma
+        página
+        web. São propriedades que uma tag <abbr title="HyperText Markup Language">HTML</abbr> pode ter para definir
+        características específicas.</p>
+
+    <p>Existem atributos genéricos (comuns a todas as tags) e atributos específicos (exclusivos de determinadas tags).
+    </p>
+
+    <h3>
+        <font face="Arial" color="red">Atributos Genéricos:</font>
+    </h3>
+
+    <ul>
+        <li>id: Um identificador único para um elemento, usado principalmente para manipulação via JavaScript.</li>
+        <li>style: Permite aplicar estilos CSS diretamente no elemento, como alterar a cor ou o tamanho da fonte.</li>
+        <li>class: Usado para agrupar elementos que compartilham o mesmo estilo, facilitando a formatação via CSS.</li>
+    </ul>
+
+    <h3>
+        <font face="Arial" color="red">Atributos Específicos:</font>
+    </h3>
+
+    <ul>
+        <li>type no input: Define o tipo de campo de entrada, como 'text' para texto, 'number' para números ou 'color'
+            para um seletor de cor.</li>
+        <li>src no img: Especifica o caminho da imagem a ser exibida.</li>
+        <li>width no img: Define a largura da imagem em pixels.</li>
+    </ul>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="textos"><mark>Textos</mark></h2>
+
+    <p>As tags <abbr title="HyperText Markup Language">HTML</abbr> específicas para formatação de texto são usadas para
+        <u>estruturar e estilizar conteúdo</u> em uma página
+        web. Seus principais conceitos são:
+    </p>
+
+    <h3>
+        <font face="Arial" color="red">Tags de Título (Heading):</font>
+    </h3>
+
+    <p>As tags &lt;h1&gt; a &lt;h6&gt; são usadas para definir títulos e subtítulos, onde &lt;h1&gt; é o mais importante
+        e &lt;h6&gt; o menos. O navegador aplica automaticamente espaçamentos (margens) entre esses elementos para
+        indicar hierarquia.</p>
+
+    <h3>
+        <font face="Arial" color="red">Parágrafos:</font>
+    </h3>
+
+    <p>A tag &lt;p&gt; é usada para definir parágrafos de texto. Assim como as tags de título, o navegador adiciona
+        margens automaticamente para separação visual.</p>
+
+    <h3>
+        <font face="Arial" color="red">Citações:</font>
+    </h3>
+
+    <p>A tag &lt;blockquote&gt; é utilizada para destacar citações ou observações, geralmente indentadas para
+        diferenciá-las do texto principal.</p>
+
+    <h3>
+        <font face="Arial" color="red">Formatação Inline:</font>
+    </h3>
+
+    <p>Tags como &lt;strong&gt; (<strong>negrito</strong>), &lt;u&gt; (<u>sublinhado</u>), &lt;i&gt; (<i>itálico</i>),
+        &lt;mark&gt; (<mark>marca-texto</mark>), &lt;sup&gt; (sobrescrito, ex.:
+        x<sup>2</sup> para expoentes) e &lt;sub&gt; (subscrito, ex.: H<sub>2</sub>O para fórmulas
+        químicas) são usadas para aplicar estilos específicos a partes do texto.</p>
+
+    <h3>
+        <font face="Arial" color="red">Responsividade e Inspeção:</font>
+    </h3>
+
+    <p>O navegador ajusta automaticamente o layout do texto para diferentes tamanhos de tela, mas o CSS é necessário
+        para um design mais responsivo.</p>
+
+    <p>O inspetor de elementos do navegador permite visualizar e entender as margens e estilos aplicados
+        automaticamente.</p>
+
+    <h3>
+        <font face="Arial" color="red">Recursos Adicionais:</font>
+    </h3>
+
+    <p>O site W3Schools é recomendado como uma referência completa para aprender mais sobre todas as tags <abbr
+            title="HyperText Markup Language">HTML</abbr>
+        disponíveis.</p>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="listas"><mark>Listas Ordenadas e Não Ordenadas</mark></h2>
+
+    <p>As listas ordenadas e não ordenadas em <abbr title="HyperText Markup Language">HTML</abbr> são estruturadas e
+        suas aplicações práticas. Seus principais
+        conceitos são:</p>
+
+    <h3>
+        <font face="Arial" color="red">Tipos de Listas:</font>
+    </h3>
+
+    <h4>Lista Ordenada (&lt;ol&gt;)</h4>
+
+    <p>Utiliza a tag &lt;ol&gt; (ordered list) e exibe itens com numeração sequencial (1, 2, 3, etc.). É ideal para
+        conteúdos que seguem uma ordem específica, como um sumário.</p>
+
+    <h4>Lista Não Ordenada (&lt;ul&gt;)</h4>
+
+    <p>Utiliza a tag &lt;ul&gt; (unordered list) e exibe itens com marcadores (geralmente bolinhas). É usada quando a
+        ordem dos itens não é relevante.</p>
+
+    <h3>
+        <font face="Arial" color="red">Estrutura das Listas:</font>
+    </h3>
+
+    <p>Ambas as listas requerem a tag &lt;li&gt; (list item) como "filha" para definir cada item da lista.</p>
+
+    <p>As tags &lt;ol&gt; e &lt;ul&gt; são tags "pai" que não aceitam texto diretamente; os itens devem ser colocados
+        dentro de &lt;li&gt;.</p>
+
+    <h3>
+        <font face="Arial" color="red">Listas Aninhadas:</font>
+    </h3>
+
+    <p>É possível criar listas dentro de outras listas (aninhamento), como uma &lt;ol&gt; dentro de um &lt;li&gt;, para
+        criar subitens (ex.: 3.1, 3.2).</p>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+    <hr>
+
+    <h2 id="links"><mark>Links</mark></h2>
+
+    <p>Os principais fundamentos dos links em HTML, usando a tag &lt;a&gt; e seus atributos.</p>
+
+    <h3>
+        <font face="Arial" color="red">Função dos Links:</font>
+    </h3>
+
+    <p>Links (ou âncoras) permitem <u>navegar entre páginas</u>, conectando uma página a outra, seja no mesmo site ou em
+        sites
+        externos. A tag &lt;a&gt; (anchor) é usada para criar links.</p>
+
+    <p>O atributo href (hypertext reference) especifica o <u>destino do link</u>, que pode ser uma URL externa (ex.:
+        https://dio.me) ou um arquivo local (ex.: about.html).</p>
+
+    <h4>Atributo target:</h4>
+
+    <p><strong>Define como o link será aberto:</strong></p>
+
+    <ul>
+        <li>_self: Abre na mesma aba (comportamento padrão).</li>
+        <li>_blank: Abre em uma nova aba.</li>
+    </ul>
+
+    <h5>Boas Práticas de Navegação:</h5>
+
+    <ul>
+        <li>Links para páginas do mesmo site devem abrir na mesma aba (_self) para manter o usuário no site.</li>
+        <li>Links para sites externos devem abrir em nova aba (_blank) para não interromper a navegação no site
+            original.</li>
+        <li>Outros valores como _parent e _top são mencionados como obsoletos, usados em frames para
+            retrocompatibilidade.</li>
+    </ul>
+
+    <h4>Atributo title:</h4>
+
+    <p>Adiciona um texto descritivo que aparece como um balãozinho (tooltip) quando o mouse passa sobre o link,
+        melhorando a experiência do usuário.</p>
+
+    <h4>Recursos do Navegador:</h4>
+
+    <p>Mesmo com target="_self", o usuário pode forçar a abertura em nova aba usando Ctrl + clique ou em nova janela com
+        Shift + clique.</p>
+
+    <small><a href="#indice">Voltar ao índice</a></small>
+
+</body>
+
+</html>
